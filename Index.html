@@ -3,36 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
     <link rel="stylesheet" href="CSS/Index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
-
-    <title>Document</title>
 </head>
-<body background="Images/cmatrix wea.png">
-    <div class="CajaCentral">
-        <div class="Titulo">
-            <h1>Generador</h1>
-            <h1>de contraseñas</h1>
+<body>
+
+    <div class="container">
+        <div class="password-box">
+            <input type="text" id="password" value="Click to generate!" readonly>
+            <span class="copy-icon" onclick="copyPassword()">📋</span>
         </div>
-        
-        <div class="Textbox">
-            
-            <label for="textbox">Cantidad de Caracteres: </label>
-            <input type="number" id="cantidad" value="50" pattern="\d*">
-            
-    
+
+        <div class="controls">
+            <div class="slider-container">
+                <label for="length">Password Length:</label>
+                <input type="range" id="length" min="6" max="100" value="22" oninput="updateLength(this.value)">
+                <span class="slider-value" id="sliderValue">22</span>
+            </div>
+
+            <div class="checkbox-group">
+                <label><input type="checkbox" id="uppercase" checked> Uppercase</label>
+                <label><input type="checkbox" id="lowercase" checked> Lowercase</label>
+                <label><input type="checkbox" id="numbers" checked> Numbers</label>
+                <label><input type="checkbox" id="symbols" checked> Symbols</label>
+            </div>
+
+            <button class="generate-button" onclick="generatePassword()">Generate Password</button>
         </div>
-        
-        <div class="Buttons">
-            <input type="button" class="Generar-boton-1" id="Generar" onclick="Generar()">
-    
-    
-        </div>
-    
     </div>
+
     
+
 </body>
-<script src="Main.js"></script>
 </html>
