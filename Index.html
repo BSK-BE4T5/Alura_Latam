@@ -1,35 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/Index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handjet:wght@100..900&display=swap" rel="stylesheet">
+
     <title>Document</title>
 </head>
-<body>
-    
-    <div class="Titulo">
-        <h1>Generador</h1>
-        <h2>de contraseñas</h2>
-    </div>
-    
-    <div class="Textbox">
-        Cantidad
-        <label for="Cantidad"></label>
-        <input type="text" inputmode="numeric" oninput="updateSliderFromTextbox(this.value)" id="textbox" name="textbox"/>
-        <div class="Slider-Container">
-            <input type="range" min="1" max="100" value="0" class="slider" id="myRange" oninput="updateValueFromSlider(this.value)">
+<body background="Images/cmatrix wea.png">
+    <div class="CajaCentral">
+        <div class="Titulo">
+            <h1>Generador</h1>
+            <h1>de contraseñas</h1>
         </div>
         
-
+        <div class="Textbox">
+            
+            <label for="textbox">Cantidad de Caracteres: </label>
+            <input type="number" id="cantidad" value="50" pattern="\d*">
+            
+    
+        </div>
+        
+        <div class="Buttons">
+            <input type="button" class="Generar-boton-1" id="Generar" onclick="Generar()">
+    
+    
+        </div>
+    
     </div>
     
-    <div class="Buttons">
-        <div class="Generar-boton-1">
-            Generar
-        </div>
-
-    </div>
-
 </body>
 <script src="Main.js"></script>
 </html>
