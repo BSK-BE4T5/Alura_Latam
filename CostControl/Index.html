@@ -3,24 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Control de gastos</title>
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="CSS/Index.css">
 </head>
 <body>
-    <div id="container">
-        <h1 style="color: white;">Control de gastos </h1>
-        <h1 style="color: rgb(16, 168, 214);">Mensuales</h1>
-        <div class="name-box">
-            <input type="text">
-        </div>
-        <div class="cost-box">
-            <input type="text">
-        </div>
-        <div class="submit-button">
 
-        </div>
+<div class="container">
+    <h2>Expense Tracker</h2>
 
-
+    <div class="form-group">
+        <input type="text" id="productName" placeholder="Product Name">
+        <input type="number" id="productCost" placeholder="Cost" min="0" step="0.01">
+        <button onclick="addExpense()">Add</button>
     </div>
-    
+
+    <table id="expenseTable">
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th>Cost</th>
+            </tr>
+        </thead>
+        <tbody id="expenseBody">
+           
+        </tbody>
+    </table>
+
+    <div class="total">
+        Total: $<span id="totalCost">0.00</span>
+    </div>
+</div>
+
+<script src="Main.js"></script>
+
 </body>
 </html>
