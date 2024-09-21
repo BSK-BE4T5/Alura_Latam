@@ -18,7 +18,7 @@
         <div class="controls">
             <div class="slider-container">
                 <label for="length">Password Length:</label>
-                <input type="range" id="length" min="6" max="100" value="22" oninput="updateLength(this.value)">
+                <input type="range" id="length" min="6" max="100" value="22" oninput="updateLength(this.value); generatePassword();">
                 <span class="slider-value" id="sliderValue">22</span>
             </div>
 
